@@ -15,7 +15,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",
-      "https://your-frontend.vercel.app", // replace later
+      "https://student-admin-app-three.vercel.app"
     ],
     credentials: true,
   })
