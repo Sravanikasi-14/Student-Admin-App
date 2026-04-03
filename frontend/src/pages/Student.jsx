@@ -26,7 +26,7 @@ const Student = () => {
         formData.append("file", selectedFiles[i]);
         formData.append("description", descriptions[i]);
 
-        await axios.post("/api/files/upload", formData, {
+        await axios.post(`${import.meta.env.VITE_API_URL}/api/files/upload`, formData, {
           headers: { Authorization: `Bearer ${token}` },
         });
       }

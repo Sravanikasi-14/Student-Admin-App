@@ -10,7 +10,7 @@ const Admin = () => {
   const token = localStorage.getItem("token");
 
   const fetchFiles = async () => {
-    const res = await axios.get("/api/files", {
+    const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/files`, {
       headers: { Authorization: `Bearer ${token}` },
     });
     setFiles(res.data.files);
