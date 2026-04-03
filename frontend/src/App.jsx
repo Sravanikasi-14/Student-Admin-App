@@ -6,14 +6,15 @@ import Admin from "./pages/Admin";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/student" element={<Student />} />
-        <Route path="/admin" element={<Admin />} />
-      </Routes>
-    </BrowserRouter>
+   <BrowserRouter>
+  <Routes>
+    <Route path="/" element={<Login />} />
+    <Route path="/register" element={<Register />} />
+    <Route path="/student" element={<Student />} />
+    <Route path="/admin" element={<Admin />} />
+    <Route path="*" element={<Login />} />
+  </Routes>
+</BrowserRouter>
   );
 }
 
