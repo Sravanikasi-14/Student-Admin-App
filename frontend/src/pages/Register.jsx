@@ -7,21 +7,23 @@ function Register() {
 
   const handleRegister = async () => {
     try {
-      await axios.post(
-        "http://localhost:5000/api/auth/register",
-        {
-          email,
-          password,
-          role: "student",
-        }
-      );
+      
+       await axios.post(
+      `${import.meta.env.VITE_API_URL}/api/auth/register`,
+      {
+        email,
+        password,
+        role: "student",
+      }
+    );
 
       alert("Registered successfully!");
     } catch (err) {
-      alert("Registration failed");
+      console.log(err.response?.data); // 👈 ADD THIS
+      alert("Registration failed ❌");
     }
-  };
-
+  }
+  
   return (
     <div>
       <h1>Register</h1>
